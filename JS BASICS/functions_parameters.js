@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 4 +++++++++++++++++
+
 function add2numbers(a,b) // (a,b) are parameters
 {
 return a+b; // When returned nothing, the function will return undefined by default so we have and have to return something

@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 4 +++++++++++++++++
+
 // // Scopes are a way to control the visibility and accessibility of variables and functions in JavaScript.
 
 // var c = 300;
