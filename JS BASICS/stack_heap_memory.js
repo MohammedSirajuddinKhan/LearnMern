@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 2 +++++++++++++++++
+
 // Stack(Primitive) gives copy & Heap(Reference or Non-Primitive) gives reference
 
 let myYoutubeName = "www.Codevolution.com"; // Stored in Stack

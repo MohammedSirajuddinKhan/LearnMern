@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 2 +++++++++++++++++
+
 let score = "33"
 
 console.log(typeof score);

@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 2 +++++++++++++++++
+
 let myDate = new Date()
 console.log(typeof myDate);
 
