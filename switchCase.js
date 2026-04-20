@@ -1,7 +1,7 @@
 // +++++++++++++++++ DAY 6 +++++++++++++++++
 
 // 1. Basic SWITCH
- 
+
 let day = 2;
 
 switch (day) {
