@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 3 +++++++++++++++++
+
 // object being declared as literals hence the name is OBJECT LITERAL
 
 const mySym = Symbol("key1");
@@ -115,4 +117,3 @@ const {courseInstructor:instructor} = course;// Object destructuring is a syntax
 console.log(instructor); // Ab kaam aur asaan hogaya hai, hum directly instructor variable ko use kar sakte hai to access the value of courseInstructor property from the course object.
 
 
-// API
