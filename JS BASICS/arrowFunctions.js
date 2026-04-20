@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 5 +++++++++++++++++
+
 const user={
     username:"Siraj",
     price:999,

@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 5 +++++++++++++++++
+
 // Immediately Invoked Function Expression (IIFE)
 // IIFE is a function that is executed immediately after it is defined.
 
