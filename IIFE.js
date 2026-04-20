@@ -19,4 +19,3 @@
     console.log(`Hello ${name} bhaisaab`);
     
 })("Sirajuddin"); // The second () is used to pass the arguments to the function.
-
