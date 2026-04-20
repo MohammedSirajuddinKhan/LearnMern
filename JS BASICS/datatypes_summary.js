@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 1 +++++++++++++++++
+
 // Primitive Datatypes
 // Cheat Code => N N S S B B U
 // N - Number & Null

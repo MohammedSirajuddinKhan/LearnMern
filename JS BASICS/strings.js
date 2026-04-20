@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 1 +++++++++++++++++
+
 //Learn about strings in JavaScript to crack interviews mostly via MDN DOCUMENTATIONS like a professional developer. 
 
 const name = "Sirajuddin"

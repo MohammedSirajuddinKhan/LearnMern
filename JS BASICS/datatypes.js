@@ -1,3 +1,5 @@
+// +++++++++++++++++ DAY 1 +++++++++++++++++
+
 // WRITE TO LEARN, JUST WATCHING TUTORIALS IS PURE BS
 
 // JavaScript Data Types
