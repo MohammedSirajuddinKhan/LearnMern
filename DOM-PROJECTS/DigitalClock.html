@@ -53,6 +53,8 @@
                 let seconds = date.getSeconds();
                 let ampm = hours >= 12 ? 'PM' : 'AM';
                 hours = hours % 12;
+                hours = hours ? hours : 12; // Converts '0' to '12' for 12-hour format
+                
                 clock.textContent = hours.toString().padStart(2,'0')+':'+minutes.toString().padStart(2,'0')+':'+seconds.toString().padStart(2,'0')+' '+ampm;
                 clkint = setInterval(start12HourClock,1000);
             }
