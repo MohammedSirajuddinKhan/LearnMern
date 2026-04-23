@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+</head>
+<body>
+    <h1>BMI CALCULATOR</h1>
+    <form>
+        <p>Height in CM: <input type="number" id="height" placeholder="Enter height"></p>
+        <p>Weight in KG: <input type="number" id="weight" placeholder="Enter weight"></p>
+        <button type="button" id="calculate" onclick="calculateBMI()">Calculate BMI</button>
+        <p id="result"></p>
+
+        <h3>BMI Weight Guide</h3>
+        <p>Underweight: BMI < 18.5</p>
+        <p>Normal weight: BMI 18.5 - 24.9</p>
+        <p>Overweight: BMI 25 - 29.9</p>
+        <p>Obesity: BMI ≥ 30</p>
+    </form>
+
+    <script>
+        function calculateBMI(){
+            const heightInput=document.getElementById('height');
+            const weightInput=document.getElementById('weight');
+            const result=document.getElementById('result');
+            
+            const height=parseInt(heightInput.value)/100; // Convert cm to meters
+            const weight=parseInt(weightInput.value);
+
+            if(isNaN(height)||isNaN(weight)||height<=0||weight<=0){
+                result.textContent="Please enter valid height and weight.";
+                return;
+            }
+            const bmi=weight/(height*height);
+            result.textContent=`Your BMI is ${bmi.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

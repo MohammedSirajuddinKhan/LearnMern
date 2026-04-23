@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .button{
+            width: 150px;
+            height: 250px;
+            border-radius: 25%;
+            margin: 10px;
+            cursor: pointer;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            text-align: center;
+            padding-top: 17px;
+        }
+        #gray{
+            background-color: gray;
+        }
+        #white{
+            background-color: white;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        p{
+            font-size: 20px;
+        }
+        #reset{
+            background-color: transparent;
+            font-size: 20px;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Scheme Switcher</h1>
+    <span class="button" id="gray"></span>
+    <span class="button" id="white"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span>
+    <span class="button" id="reset"> Reset</span>
+    <p>Try clicking on one of the colors above</p>
+    <span style="font-size: 20px;font-weight: 100;">to change the background color of this page!</span>
+</body>
+<script>
+    const gray=document.getElementById('gray');
+    const white=document.getElementById('white');
+    const blue=document.getElementById('blue');
+    const yellow=document.getElementById('yellow');
+    const reset=document.getElementById('reset');
+
+    gray.addEventListener('click',()=>{
+        document.body.style.backgroundColor='gray';
+    })
+    white.addEventListener('click',()=>{
+        document.body.style.backgroundColor='white';
+    })
+    blue.addEventListener('click',()=>{
+        document.body.style.backgroundColor='blue';
+    })
+    yellow.addEventListener('click',()=>{
+        document.body.style.backgroundColor='yellow';
+    })
+    reset.addEventListener('click',()=>{
+        document.body.style.backgroundColor='initial';
+    })
+
+</script>
+</html>

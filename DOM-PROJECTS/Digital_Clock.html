@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        #clock {
+            align-items: center;
+            font-size: 10vmin;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            margin-top: 10%;
+        }
+        button {
+            display: block;
+            border: black 2px solid;
+            border-radius: 7px;
+            background-color: orange;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body style="background-color: #212121;">
+    <p id="clock">00:00:00</p>
+    <button onclick="start24HourClock()">START 24-HOUR CLOCK</button>
+    <button onclick="start12HourClock()">START 12-HOUR CLOCK</button>
+    <script>
+
+        let clkint = null; // Global Variable to store the interval ID
+
+        function start24HourClock(){
+            clearInterval(clkint); // Clears previous interval to prevent multiple intervals running simultaneously
+            const clock=document.getElementById('clock');
+            const date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            clock.textContent = hours.toString().padStart(2,'0')+':'+minutes.toString().padStart(2,'0')+':'+seconds.toString().padStart(2,'0');
+            clkint = setInterval(start24HourClock,1000);            }
+
+            function start12HourClock(){
+                clearInterval(clkint); // Clears previous interval to prevent multiple intervals running simultaneously
+                const clock=document.getElementById('clock');
+                const date=new Date();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12;
+                clock.textContent = hours.toString().padStart(2,'0')+':'+minutes.toString().padStart(2,'0')+':'+seconds.toString().padStart(2,'0')+' '+ampm;
+                clkint = setInterval(start12HourClock,1000);
+            }
+    </script>
+</body>
+</html>
