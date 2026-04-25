@@ -76,7 +76,7 @@
         "click",
         function (e) {
           if (e.target.tagName === "IMG") {
-            console.log(e.target.id);  
+            console.log(e.target.id);
             let removeIT = e.target.parentNode; // this removes the <li>s used from the structure itself by the use of parentNode
             removeIT.remove();
           }
@@ -86,4 +86,3 @@
     </script>
   </body>
 </html>
-// removeIT.parentNode.removeChild(removeIT); Harder to use
