@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events</title>
+  </head>
+  <body style="background: #212121; color: aliceblue">
+    <h2>Amazing Images</h2>
+    <ul id="images">
+      <li>
+        <img
+          id="photoshop"
+          src="https://images.pexels.com/photos/36928649/pexels-photo-36928649.jpeg"
+          alt="photoshop"
+          style="width: 200px"
+        />
+      </li>
+      <li>
+        <img
+          src="https://images.pexels.com/photos/36928654/pexels-photo-36928654.jpeg"
+          alt="Image 2"
+          id="japan"
+          style="width: 200px"
+        />
+      </li>
+      <li>
+        <img
+          src="https://images.pexels.com/photos/2080960/pexels-photo-2080960.jpeg"
+          alt="Image 3"
+          id="river"
+          style="width: 200px"
+        />
+      </li>
+      <li>
+        <img
+          src="https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg"
+          id="mountain"
+          alt="Image 4"
+          style="width: 200px"
+        />
+      </li>
+      <li>
+        <a href="https://google.com" id="google" style="color: aliceblue"
+          >Google</a
+        >
+      </li>
+    </ul>
+    <script>
+      // To Learn
+      // type, timestamp, defaultPrevente
+      // target, toElement, srcElement, currentTarget
+      // INTERVIEW -> clientX, clientY, screenX, screenY
+      // altKey, ctrlKey, shiftKey, KeyCode
+      // Event Propogation:-
+      // Event Bubbling when last parameter in addEventListener is kept false
+      // Goes from bottom to top
+      // Event Capturing when last parameter in addEventListener is kept true
+      // Goes from top to bottom
+
+      // document.getElementById('images').addEventListener('click',function(e){
+      //     alert("Clicked inside the ul");
+      // },true);
+
+      // document.getElementById('japan').addEventListener('click',function(e){
+      //     alert("Japan Clicked...");
+      //     e.stopPropagation()
+      // },false);
+
+      // document.getElementById('google').addEventListener('click',function(e){
+      //     e.preventDefault(); // google is clicked but the default behaviour of link to open google.com is prevented using preventDefault(); method
+      //     e.stopPropagation();
+      // },false)
+
+      document.querySelector("#images").addEventListener(
+        "click",
+        function (e) {
+          if (e.target.tagName === "IMG") {
+            console.log(e.target.id);  
+            let removeIT = e.target.parentNode; // this removes the <li>s used from the structure itself by the use of parentNode
+            removeIT.remove();
+          }
+        },
+        false,
+      );
+    </script>
+  </body>
+</html>
+// removeIT.parentNode.removeChild(removeIT); Harder to use
