@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        padding: 10px;
+        background-color: rgb(227, 143, 32);
+        border-radius: 5px;
+        color: white;
+        font-weight: bolder;
+      }
+      button:hover{
+        background-color: rgb(255, 190, 105);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="display">0</h1>
+    <button id="increase">INCREASE</button>
+    <button id="reset">RESET</button>
+    <button id="decrease">DECREASE</button>
+    <script>
+        let count = 0;
+        let display = document.getElementById('display');
+        let increase = document.getElementById('increase').addEventListener('click',function(){
+            count++;
+            updateDisplay();
+            
+        })
+        let decrease = document.getElementById('decrease').addEventListener('click',function(){
+            count--;
+            updateDisplay();
+        })
+        let reset = document.getElementById('reset').addEventListener('click',function(){
+            count = 0;
+            updateDisplay();
+        })
+        function updateDisplay(){
+            display.textContent=count;
+            if (count>0) {
+                display.style.color ='green';
+            }
+            else if(count<0){
+                display.style.color = 'red';
+            }
+            else{
+                display.style.color = 'black'
+            }
+            
+        }
+        
+    </script>
+  </body>
+</html>
