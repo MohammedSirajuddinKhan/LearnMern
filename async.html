@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Practice</title>
+  </head>
+  <body>
+    <h1>Sirajuddin Codes</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const intervalId = function () {
+      console.log("Sirajuddin", Date.now());
+      // This will print `Sirajuddin` every 3 seconds
+    };
+    const cancelIntID = setInterval(intervalId, 2000);
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      console.log("STOP clicked");
+
+      clearInterval(cancelIntID);
+    });
+  </script>
+</html>

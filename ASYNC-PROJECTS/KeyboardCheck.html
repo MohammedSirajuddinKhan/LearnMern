@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KeyBoard Check</title>
+  </head>
+  <body>
+
+      <div id="insert">
+        <div class="key">Press the key and watch magic</div>
+        <p> Key Pressed: <b id="key">0</b></p>
+        <p> Key Code: <b id="keycode">0</b></p>
+        <p> Code: <b id="code">0</b></p>
+    </div>
+    <script>
+const insert = document.getElementById('insert');
+let key = document.getElementById('key')
+let keycode = document.getElementById('keycode')
+let code = document.getElementById('code')
+window.addEventListener('keydown',(e)=>{
+    key = document.getElementById('key').textContent=`${e.key===' '?'Space':e.key}`;
+    keycode = document.getElementById('keycode').textContent=`${e.keyCode}`;
+    code = document.getElementById('code').textContent=`${e.code}`;
+
+})
+    </script>
+  </body>
+</html>
