@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure -> LEXICAL SCOPING</title>
+  </head>
+  <body style="background-color: #212121;"></body>
+  <script>
+    // function init() {
+    //   let name = "Mozilla"; // name is a local variable created by init
+    //   function displayName() {
+    //     // it is an inner function that forms closure
+    //     console.log(name); // use varaiable declared in the parent
+    //   }
+    //   displayName();
+    // }
+    // init();
+
+    function outer(){
+        let username = "siraj"
+        console.log("OUTER ",secret);
+        
+        function inner(){
+            let secret = "123"
+            console.log("INNER FUNCTION",username);
+        }
+        function inner2(){
+            console.log("INNER FUCTION 2",username);
+            console.log(secret);
+        }
+    inner();
+    }
+    outer();
+    
+  </script>
+</html>
